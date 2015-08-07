@@ -9,6 +9,6 @@
   "author": "Eric Brelsford <ebrelsford@gmail.com> (http://ebrelsford.github.io/)",
   "license": "AGPL-3.0",
   "dependencies": {
-    "gith": "^1.0.4"
+    "gith": "git+https://github.com/danheberden/gith.git"
   }
 }
