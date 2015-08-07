@@ -1,0 +1,14 @@
+{
+  "name": "curbyourlitter-streetlights",
+  "version": "1.0.0",
+  "description": "Hook handler for curbyourlitter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eric Brelsford <ebrelsford@gmail.com> (http://ebrelsford.github.io/)",
+  "license": "AGPL-3.0",
+  "dependencies": {
+    "gith": "^1.0.4"
+  }
+}
