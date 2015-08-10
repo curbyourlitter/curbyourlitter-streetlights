@@ -8,10 +8,10 @@ gith().on('all', function(payload) {
         console.log('Push to curbyourlitter-sidewalk detected, pulling');
         var pull = spawn('bash', ['~/sidewalk/build/pull.sh']);
         pull.stdout.on('data', function (data) {
-            console.log(data);
+            console.log(data.toString());
         });
         pull.stderr.on('data', function (data) {
-            console.log(data);
+            console.log(data.toString());
         });
         pull.on('close', function (code) {
             console.log('Pull exited with code ' + code);
