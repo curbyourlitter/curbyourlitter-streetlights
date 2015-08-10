@@ -6,7 +6,7 @@ gith().on('all', function(payload) {
     console.log('Gith detected activity on ' + payload.repo + '#' + payload.branch);
     if (payload.repo === 'curbyourlitter/curbyourlitter-sidewalk' && payload.branch === 'gh-pages') {
         console.log('Push to curbyourlitter-sidewalk detected, pulling');
-        var pull = spawn('bash', ['~/sidewalk/build/pull.sh']);
+        var pull = spawn('bash', ['/home/cyl/sidewalk/build/pull.sh']);
         pull.stdout.on('data', function (data) {
             console.log(data.toString());
         });
