@@ -17,6 +17,19 @@ gith().on('all', function(payload) {
             console.log('Pull exited with code ' + code);
         });
     }
+    if (payload.repo === 'curbyourlitter/curbyourlitter-sidewalk-zombie' && payload.branch === 'gh-pages') {
+        console.log('Push to curbyourlitter-sidewalk-zombie detected, pulling');
+        var pull = spawn('bash', ['/home/cyl/sidewalk-zombie/build/pull.sh']);
+        pull.stdout.on('data', function (data) {
+            console.log(data.toString());
+        });
+        pull.stderr.on('data', function (data) {
+            console.log(data.toString());
+        });
+        pull.on('close', function (code) {
+            console.log('Pull exited with code ' + code);
+        });
+    }
     if (payload.repo === 'curbyourlitter/curbyourlitter-alley' && payload.branch === 'master') {
         // Nothing yet, but consider deploying
     }
